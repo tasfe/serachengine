@@ -1,0 +1,24 @@
+<!-- 搜索引擎的配置文件 -->
+<!-- 
+当期节点的名称
+当前最大线程数
+当前最大内存数
+当前下载文件位置
+当前数据库文件位置
+当期数据库类型
+当前的日志文件存放位置
+ -->
+<config>
+<server>
+<ip></ip>
+<port></port>
+</server>
+<point>
+<ip></ip>
+<port></port>
+</point>
+<update>
+</update>
+<help>
+</help>
+</config>
