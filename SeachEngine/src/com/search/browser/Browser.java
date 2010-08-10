@@ -1,4 +1,6 @@
 package com.search.browser;
+import java.net.*;
+import java.io.*;
 /**
  * a simple web browser
  * @author my123jian@gmail.com

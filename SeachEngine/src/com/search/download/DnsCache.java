@@ -11,7 +11,7 @@ public class DnsCache {
 	 * @param host 主机名字
 	 * @return 返回ip地址
 	 */
-	public static String getIpAddress(String host)
+	public static synchronized String getIpAddress(String host)
 	{
 		if(ipTable==null)
 		{
