@@ -1,13 +1,18 @@
 package com.search.browser;
 /**
- * Ä£Äâä¯ÀÀÆ÷µÄ²Ù×÷
- * @author Administrator
+ * a simple web browser
+ * @author my123jian@gmail.com
+ * @version 1.0
  *
  */
 public class Browser {
 	public Browser()
 	{
 		
+	}
+	public String getName()
+	{
+		return null;
 	}
 
 }
