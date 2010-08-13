@@ -9,5 +9,9 @@ public class Config {
 	 * 下载的文件夹的位置
 	 */
 	protected String downLoadFolder;
+	/**
+	 * http的头部标识
+	 */
+	protected String userAgent;
 
 }
