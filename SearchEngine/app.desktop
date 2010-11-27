@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=搜索引擎爬虫
+Exec=searchengine
+Terminal=false
