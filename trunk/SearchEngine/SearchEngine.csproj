@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FC51EC2-4EB1-490C-BA53-9B63D137569D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>SearchEngine</AssemblyName>
+    <Description>一个简单的搜索引擎的实现</Description>
+    <StartupObject>SearchEngine.MainClass</StartupObject>
+    <RootNamespace>SearchEngine</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="TreeNode.cs" />
+    <Compile Include="ISearchHandle.cs" />
+    <Compile Include="AbstractTree.cs" />
+    <Compile Include="AbstractTreeNode.cs" />
+    <Compile Include="EngineManager.cs" />
+    <Compile Include="DnsManager.cs" />
+    <Compile Include="HistoryManager.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="DownloadManager.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="DownloadThread.cs" />
+    <Compile Include="MIME.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="DbEnum.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="Answer.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="DnsService.cs" />
+    <Compile Include="UrlFilter.cs" />
+    <Compile Include="Xpath.cs" />
+    <Compile Include="UriPattern.cs" />
+    <Compile Include="QueueFactory.cs" />
+    <Compile Include="Queue.cs" />
+    <Compile Include="HistoryFactory.cs" />
+    <Compile Include="TaskHandle.cs" />
+    <Compile Include="DownloadFactory.cs" />
+    <Compile Include="CodeGen.cs" />
+    <Compile Include="JscriptCodeGen.cs" />
+    <Compile Include="CSharpCodeGen.cs" />
+    <Compile Include="html\CssParser.cs" />
+    <Compile Include="html\CssWriter.cs" />
+    <Compile Include="html\CssReader.cs" />
+    <Compile Include="html\HtmlParser.cs" />
+    <Compile Include="html\HtmlReader.cs" />
+    <Compile Include="html\HtmlWriter.cs" />
+    <Compile Include="html\HtmlEntites.cs" />
+    <Compile Include="FormMain.cs" />
+    <Compile Include="control\ControlAttribute.cs" />
+    <Compile Include="control\ControlParser.cs" />
+    <Compile Include="html\HtmlConfig.cs" />
+    <Compile Include="control\ControlEnum.cs" />
+    <Compile Include="linux\MainWindow.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="xmlui\UiBinder.cs" />
+    <Compile Include="gtk-gui\SearchEngine.linux.MainWindow.cs" />
+    <Compile Include="test\TestCase.cs" />
+    <Compile Include="test\Test.cs" />
+    <Compile Include="test\TestResult.cs" />
+    <Compile Include="test\TestSuit.cs" />
+    <Compile Include="task\TaskCase.cs" />
+    <Compile Include="json\JSON.cs" />
+    <Compile Include="json\JSONArray.cs" />
+    <Compile Include="json\JSONException.cs" />
+    <Compile Include="json\JSONNumber.cs" />
+    <Compile Include="json\JSONObject.cs" />
+    <Compile Include="json\JSONString.cs" />
+    <Compile Include="config\Config.cs" />
+    <Compile Include="task\TaskEngine.cs" />
+    <Compile Include="DnsCache.cs" />
+    <Compile Include="MainGtk.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="TestGame.cs" />
+    <Compile Include="taobao\TaobaoGen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.desktop" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="系统说明.txt" />
+    <None Include="Window.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="html\" />
+    <Folder Include="script\" />
+    <Folder Include="control\" />
+    <Folder Include="image\" />
+    <Folder Include="data\" />
+    <Folder Include="windows\" />
+    <Folder Include="linux\" />
+    <Folder Include="xmlui\" />
+    <Folder Include="test\" />
+    <Folder Include="task\" />
+    <Folder Include="json\" />
+    <Folder Include="config\" />
+    <Folder Include="taobao\" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties InternalTargetFrameworkVersion="3.5" />
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
