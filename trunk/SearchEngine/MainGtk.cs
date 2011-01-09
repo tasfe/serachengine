@@ -33,6 +33,8 @@ namespace SearchEngine
 			Application.Init();
 			MainWindow mainWindow=new MainWindow();
 			mainWindow.Show();
+			about a=new about();
+			a.Show();
 			Application.Run();
 		}
 	}

@@ -6,7 +6,7 @@
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1FC51EC2-4EB1-490C-BA53-9B63D137569D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AssemblyName>SearchEngine</AssemblyName>
     <Description>一个简单的搜索引擎的实现</Description>
     <StartupObject>SearchEngine.MainClass</StartupObject>
@@ -46,6 +46,8 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -114,6 +116,10 @@
     <Compile Include="Server.cs" />
     <Compile Include="TestGame.cs" />
     <Compile Include="taobao\TaobaoGen.cs" />
+    <Compile Include="about.cs" />
+    <Compile Include="gtk-gui\SearchEngine.about.cs" />
+    <Compile Include="ConfigView.cs" />
+    <Compile Include="gtk-gui\SearchEngine.ConfigView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.desktop" />
