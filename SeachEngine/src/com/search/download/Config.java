@@ -1,16 +1,17 @@
 package com.search.download;
+import java.io.*;
 /**
- * 下载文件的配置文件
+ * 脧脗脭脴脦脛录镁碌脛脜盲脰脙脦脛录镁
  * @author Administrator
  *
  */
 public class Config {
 	/**
-	 * 下载的文件夹的位置
+	 * 脧脗脭脴碌脛脦脛录镁录脨碌脛脦禄脰脙
 	 */
 	protected String downLoadFolder;
 	/**
-	 * http的头部标识
+	 * http碌脛脥路虏驴卤锚脢露
 	 */
 	protected String userAgent;
 
